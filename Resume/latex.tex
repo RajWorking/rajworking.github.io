@@ -1,0 +1,379 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{ballblue}{rgb}{0.13, 0.67, 0.8}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+
+\usepackage[colorlinks = true,
+            linkcolor = red,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{academicons}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\hypersetup{pdfborder = 0 0 0}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4pt}
+
+% Adjust margins
+\usepackage[left=1.1cm,right=1.1cm,top=1.1cm,bottom=1.1cm]{geometry}
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1.12in}
+% \addtolength{\topmargin}{-0.3in}
+% \addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {\; #1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeBulletItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\eduSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small{#3}} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-10pt}
+}
+
+\newcommand{\expSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1 $|$ \small{\textnormal{\textit{#3}}}} & \textbf{\small #2} \\
+       & \textit{\small #4} \\
+    \end{tabular*}\vspace{-16pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-12pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textbf{\small #2} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+\begin{document}
+
+\begin{center}
+    {\huge \scshape Raj Maheshwari} \\ \vspace{1pt}
+    \small
+    % \raisebox{-0.1\height}\faPhone\ +91 8875468858 ~
+    \href{mailto:rajmahes@andrew.cmu.edu}{rajmahes@andrew.cmu.edu} %\faEnvelope\ 
+    $|$
+    \href{https://www.linkedin.com/in/raj-maheshwari-awesome/}{linkedin.com/in/raj-maheshwari-awesome} % \faLinkedin\ 
+    $|$
+    \href{https://github.com/RajWorking}{github.com/RajWorking} %\faGithub\
+    $|$
+    \href{https://scholar.google.com/citations?hl=en&user=W2EjY_EAAAAJ}{Google Scholar} % \aiGoogleScholarSquare
+    
+    \vspace{-8pt}
+\end{center}
+
+
+% -----------Summary-----------
+% \section{Objective}
+% \centering{\small{Seeking Summer 2024 internship between May 13 and Aug 15}}
+% \vspace{-12pt}
+% adjust vscape based on the space you want to leave between each section.
+
+%-----------EDUCATION-----------
+\section{Education}
+\vspace{2pt}
+  \resumeSubHeadingListStart
+    \eduSubheading
+      {Carnegie Mellon University - School of Computer Science}{Aug 2025 -- Dec 2026}
+      {Master's in Natural Language Processing and Machine Learning (MIIS, LTI);
+      GPA: \textnormal{3.96/4.0}
+      }{Pittsburgh, PA}
+    
+    \resumeItemListStart
+      \resumeBulletItem {
+        \textbf{Selected Coursework:} Advanced NLP, Deep Learning Systems, Generative AI, LLM Systems, LLM Applications.
+      }
+      \resumeBulletItem{
+          \textbf{Research} (advised by \textbf{Prof. Yonatan Bisk}; under review at \textbf{EMNLP 2026}): Evaluating data augmentation using consistent and counterfactual examples to improve contextual faithfulness while preserving parametric knowledge across SFT and DPO.
+        }
+      
+      \resumeBulletItem{
+        \textbf{Graduate Teaching Assistant:} Probability \& Computing, Generative AI.
+      }
+    \resumeItemListEnd
+
+    \vspace{1pt}
+    
+    \eduSubheading
+      {International Institute of Information Technology, Hyderabad}{Aug 2019 -- Jul 2023}
+      {Bachelor of Technology in Computer Science and Engineering; CGPA: \textnormal{9.54/10}}{Hyderabad, India}
+    
+    \resumeItemListStart
+      \resumeBulletItem {
+        \textbf{Coursework:} Data Structures \& Algorithms, Linear Algebra, Probability, Operating Systems \& Networks, Computer Vision, Topics in Reinforcement Learning, Distributed Systems, Data \& Applications.
+      }
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-13pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\vspace{2pt}
+  \resumeSubHeadingListStart
+
+    \eduSubheading
+      {Machine Learning Research Intern}{May 2026 -- Aug 2026}
+      {\href{https://www.openhands.dev/}{OpenHands} $|$ advised by \href{https://www.phontron.com/}{Prof. Graham Neubig}}{Pittsburgh, PA}
+
+    \resumeItemListStart
+
+        \resumeBulletItem{
+        Architected an \textbf{8-stage} end-to-end pipeline turning \textbf{200K\texttt{+}} real OpenHands agent conversations (\textbf{$\sim$100 GB} of trajectories) into verifiable, leak-proof RL coding tasks (\textbf{Harbor} format) by constructing each task's pre-work repo state and human-merged gold state from OpenTelemetry traces across \textbf{1000\texttt{+}} unique repos and storing them in GCS as Git bundles.
+        }
+        \resumeBulletItem{
+        Automated per-task grader creation via a \textbf{multi-agent framework}, producing deterministic fail-to-pass/pass-to-pass unit tests and an \textbf{LLM-as-a-judge} checklist using ground truth and multi-model agent rollouts. Designed a \textbf{recursively self-improving mechanism} using meta-harness search and verifier rewards to improve \textbf{OpenHands SDK} task performance.
+        }
+
+    \resumeItemListEnd
+
+    \eduSubheading
+      {Software Engineer}{Jul 2023 -- Jul 2025}
+      {Google -- Search Verticals}{Bengaluru, India}
+
+    \resumeItemListStart
+    
+        \resumeBulletItem{
+        Integrated sports insights into \textbf{\href{https://www.samsung.com/in/support/mobile-devices/how-to-use-now-bar-and-now-brief-features-on-the-samsung-galaxy-s25/}{Samsung S25 Now Bar}}. Enriched LLM-generated outputs with real-time first- and third-party data streams to deliver fresh, glanceable, and context-rich updates for hundreds of millions of sports fans worldwide.
+        }
+        \resumeBulletItem{
+        Developed sports experiences across multiple surfaces -- Discover, Home Stack, iOS and Android apps, and notifications. Contributed to \textbf{Sports Hub}, a personalized web app delivering real-time updates and content for fans.
+        }
+        \resumeBulletItem{
+        Improved engagement in the \textbf{Google Sports MiniApp} by enabling users to discover and follow teams \& leagues through new search functionality. Designed backend pipelines with Knowledge Graph queries to maintain active datasets across \textbf{50\texttt{+}} locales.
+        }
+        \resumeBulletItem{
+        Automated migration of \textbf{1,500+} server platform nodes to a new integration-testing framework, reducing manual effort, improving onboarding ef{}ficiency, and \textbf{saving an estimated several decades of cumulative engineering effort}.
+        }
+        \resumeBulletItem{
+        Recognized as a coach for the \textbf{Google Tech Immersion} program, mentoring and onboarding Nooglers, fostering confidence, productivity, and a stronger engineering culture across teams.
+        }
+        
+    \resumeItemListEnd
+
+        % \resumeBulletItem {Enabled service owners to create hermetic environments for functional and performance testing of their applications.}
+        % \resumeBulletItem {\textbf{Tech:} Gemini Ecosystem, Python, Java, C++, Blaze, Starlark, Protocol Buffers, gRPC}
+        % \resumeBulletItem {Designed and implemented a CLI tool to simplify RPC interactions with Google's primary data management platform for AI research. This tool consolidated over 200 custom scripts into a single, efficient solution.}
+        % \resumeBulletItem {Consolidated 2 dashboards, each showing metrics for separate but inter-related hierarchies. Shutting down one of these dashboards would eventually help \textbf{save infrastructure resources and development effort}.}
+    
+    % \vspace{2pt}
+
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%------------Publications-----------
+\section{Publications}
+
+\vspace{-4pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+    {\textbf{Mind the Gap: Multilingual Divide in LLM Bias Detection and Reasoning.}}
+    {\textnormal{\href{https://openreview.net/pdf?id=xtOfzwKwXN}{\textit{ACL 2026 SRW}}}}
+    \vspace{-24pt}
+
+    \resumeProjectHeading
+    {\textbf{Public Blockchain-Envisioned Security Scheme for Internet of Drones Applications.}}
+    {\textnormal{\href{https://ieeexplore.ieee.org/document/10078405}{\textit{IEEE TVT 2023}}}}
+    \vspace{-10pt}
+    %       \resumeSubHeadingListStart
+    %         \resumeItem{Constructed the cryptographic primitives for post-quantum lattice-based aggregate signature scheme.}
+    %       \resumeSubHeadingListEnd
+
+    % \resumeProjectHeading
+    % {\textbf{Blockchain-Based Efficient Access Control With Handover Policy in IoV-Enabled ITS.}}
+    % {\textnormal{\href{https://ieeexplore.ieee.org/abstract/document/10285436}{\textit{IEEE TVT 2023}}}}
+    %       \resumeSubHeadingListStart
+    %         \resumeItem{Simulated the proposed scheme using NS3 network simulator. Analyzed traffic for metrics such as delay, throughput and PDR.}
+    %       \resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-2pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{\href{https://github.com/RajWorking/Agentic-Concierge/}{Agentic Concierge}} $|$ \emph{Python, FastAPI, SQLite}}{Mar 2026 -- Apr 2026}
+        \resumeItemListStart
+            \resumeBulletItem{
+                Built a \textbf{harness for agentic booking} across rides and appointments, using \textbf{pluggable adapters} for providers and domains.
+            }
+            \resumeBulletItem{
+                Enforced safe, auditable execution with a \textbf{propose-then-commit gate} and append-only, SHA-256 hash-chained logs, preventing replay and parameter substitution while enabling session reconstruction and tamper detection.
+            }
+        \resumeItemListEnd
+    
+    \vspace{-12pt}
+
+    \resumeProjectHeading
+    {\textbf{\href{https://github.com/RajWorking/taskweaver}{TaskWeaver}} $|$ \emph{PyTorch, Hugging Face}}{Aug 2025 -- Nov 2025}
+        \resumeItemListStart
+            \resumeBulletItem{
+                Developed a \textbf{hypernetwork-based system} for instance-level model adaptation that generates \textbf{per-input LoRA weights} from prompt embeddings, extending \href{https://github.com/SakanaAI/text-to-lora}{\underline{Text-to-LoRA}}.
+            }
+            \resumeBulletItem{
+                Learned a \textbf{task-label-free} universal adaptation mapping across Pythia, Gemma, and Qwen, outperforming mixed-LoRA on held-out \textbf{RACE} (18.7\% \textrightarrow{} 25.1\%) and \textbf{SVAMP} (4.67\% \textrightarrow{} 16.3\%).
+            }
+        \resumeItemListEnd
+    
+    % \vspace{-12pt}
+
+    % \resumeProjectHeading
+    % {\href{https://www.linkedin.com/company/openhands-ai/}{\textbf{OpenHands}} $|$ \emph{Advised by Prof. Graham Neubig}}{Jul 2024 -- Dec 2024}
+    % \resumeItemListStart
+    %     \resumeBulletItem{
+    %         Integrated the \href{https://github.com/All-Hands-AI/OpenHands/pull/3507}{\underline{Aider Editing Benchmark}} into the \textbf{CodeAct Agent} as a lightweight alternative to SWE-bench, enabling \textbf{rapid iteration} on file-editing improvements, and built cost and action histograms to track agent performance.
+    %     }
+    % \resumeItemListEnd
+
+    \vspace{-12pt}
+
+   \resumeProjectHeading
+    {\textbf{\href{https://summerofbitcoin.org/}{Summer of Bitcoin}} $|$ \emph{JavaScript, Node.js}}{Jul 2022 -- Sep 2022}
+    \resumeItemListStart
+        \resumeBulletItem{
+            \textbf{Open Source Contributor} for a \href{https://bcoin.io/}{\underline{Bitcoin node/wallet system}}. Implemented \href{https://bitcoinops.org/en/topics/taproot/}{\underline{key feature upgrades}} to improve scalability, reliability, and test coverage. Mentored contributors on blockchain and cryptocurrency fundamentals.
+        }
+    \resumeItemListEnd
+
+    % \vspace{-12pt}
+
+    % \resumeProjectHeading
+    %       {\textbf{Operating Systems} $|$ \emph{C, Linux, System calls}}{Sept 2020 -- Oct 2020}
+    %       \resumeItemListStart
+    %         \resumeBulletItem{\textbf{\href{https://github.com/RajWorking/C-shell}{C Shell:}} Built a bash-based command interpreter in C with support for piping, redirection and process management.}
+    %         \resumeBulletItem{\textbf{\href{https://github.com/RajWorking/Modified_xv6}{Enhanced MIT xv6 OS:}} Added new system calls and CPU Scheduling methods (FCFS, MLFQ, PBS).}
+    %     \resumeItemListEnd
+    
+    % \resumeProjectHeading
+    %     {\textbf{Color Me} $|$ \emph{Tensorflow, OpenCV}}{Feb 2022 -- Apr 2022}
+    %     \resumeItemListStart
+    %         \resumeBulletItem{Reproduced the \href{https://github.com/RajWorking/ColorMe}{``Colorful Image Colorization” (2016)} deep learning model to generate realistic colorizations of grayscale images.  Enhanced model performance by fine-tuning pre-trained weights on a custom landscape dataset.}
+    %     \resumeItemListEnd
+
+    % \vspace{-12pt}
+
+    % \resumeProjectHeading
+    %     {\textbf{Distributed Graph Database} $|$ \emph{goLang, gRPC}}{Mar 2022 -- Apr 2022}
+    %     \resumeItemListStart
+    %         \resumeBulletItem{Created a fault-tolerant, scalable \href{https://github.com/RajWorking/ds-project}{distributed graph database} using        \textbf{Raft} consensus algorithm with data sharding across clusters.}
+    %     \resumeItemListEnd
+    
+    \resumeSubHeadingListEnd
+
+
+% -----------Technical Skills-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C\texttt{++}, Java, Go, JavaScript, Bash} \\
+     \textbf{Frameworks \& Libraries}{: PyTorch, NumPy, Pandas, React, Flutter}\\
+
+     % Development frameworks
+    }}
+ \end{itemize}
+ \vspace{-12pt}
+% adjust vscape based on the space you want to leave between each section.
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Achievements}
+
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      % \small\textbf{Expert on Codeforces}{, Peak rating 1854} & \textbf{\small 2022}\\
+      % \small\textbf{\href{https://codedrills.io/contests/icpc-amritapuri-2020-regional-round/scoreboard}{ACM-ICPC Amritapuri Regionals}}{, Rank 168 (out of 722 teams)} & \textbf{\small 2020}\\
+      \small\textbf{AIR 1149, IIT JEE Advanced} (top 0.5\%); \textbf{AIR 1160, IIT JEE Main} (top 0.1\%) & \textbf{\small 2019}\\
+    \end{tabular*}
+
+\end{document}
