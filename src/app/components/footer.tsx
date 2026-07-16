@@ -1,5 +1,3 @@
-import { Github, Linkedin, GraduationCap, Mail } from 'lucide-react';
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -11,7 +9,7 @@ export function Footer() {
             © {currentYear} Raj Maheshwari. All rights reserved.
           </p>
           <p>
-            Last updated: February 2026
+            Last updated: July 2026
           </p>
         </div>
       </div>

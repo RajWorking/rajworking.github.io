@@ -16,7 +16,7 @@ interface ProjectProps {
 
 function ProjectCard({ title, period, description, highlights, tags, githubUrl, liveUrl }: ProjectProps) {
   return (
-    <Card className="p-6 md:p-8 hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
+    <Card className="h-full rounded-2xl border-zinc-200/80 bg-white p-6 md:p-7 flex flex-col transition-all duration-300 group hover:-translate-y-1 hover:border-[var(--link-color)]/30 hover:shadow-xl hover:shadow-cyan-950/5">
       <div className="space-y-4 flex-1">
         {/* Header */}
         <div>
@@ -44,21 +44,22 @@ function ProjectCard({ title, period, description, highlights, tags, githubUrl, 
           ))}
         </ul>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 pt-2">
-          {tags.map((tag) => (
-            <TagChip key={tag} label={tag} />
-          ))}
-        </div>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 pt-6">
+        {tags.map((tag) => (
+          <TagChip key={tag} label={tag} />
+        ))}
       </div>
 
       {/* Actions */}
-      <div className="flex flex-wrap gap-3 pt-6 border-t border-border mt-6">
+      <div className="flex flex-wrap gap-3 pt-4 border-t border-border mt-4">
         {githubUrl && (
           <Button variant="outline" size="sm" asChild>
             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
-              GitHub
+              View repository
             </a>
           </Button>
         )}
@@ -78,41 +79,50 @@ function ProjectCard({ title, period, description, highlights, tags, githubUrl, 
 export function ProjectsSection() {
   const projects: ProjectProps[] = [
     {
+      title: 'Agentic Concierge',
+      period: 'Mar 2026 – Apr 2026',
+      description: 'A safety-first harness for agents that book rides and appointments end to end.',
+      highlights: [
+        'Designed pluggable provider and domain adapters so one agent loop can discover, compare, and execute across services',
+        'Added a propose-then-commit gate requiring explicit user confirmation before every state-changing action',
+        'Built append-only SHA-256 hash-chained audit logs to detect replay, parameter substitution, and tampering',
+      ],
+      tags: ['Python', 'FastAPI', 'SQLite', 'Agent Safety', 'Tool Use'],
+      githubUrl: 'https://github.com/RajWorking/Agentic-Concierge',
+    },
+    {
       title: 'TaskWeaver',
       period: 'Aug 2025 – Nov 2025',
-      description: 'Hypernetwork-based instance-level model adaptation using dynamic LoRA weight generation',
+      description: 'Instance-level language-model adaptation through dynamically generated LoRA weights.',
       highlights: [
-        'Developed hypernetwork architecture that generates per-input LoRA weights for instance-level adaptation',
-        'Trained across mixed datasets (GSM8K, MMLU, BoolQ, HellaSwag) to handle diverse task distributions',
-        'Evaluated on held-out test sets; compared performance against static and mixed LoRA baselines',
-        'Benchmarked across multiple model families: Pythia, Gemma, and Qwen',
+        'Generated per-input LoRA weights from semantic prompt embeddings without relying on task labels',
+        'Learned a universal adaptation mapping across Pythia, Gemma, and Qwen model families',
+        'Outperformed mixed-LoRA baselines on held-out RACE and SVAMP evaluations',
       ],
       tags: ['PyTorch', 'LoRA', 'Hypernetworks', 'Model Adaptation', 'Multi-Task Learning'],
       githubUrl: 'https://github.com/RajWorking/taskweaver',
     },
     {
-      title: 'All Hands AI',
-      period: 'Aug 2024 – Dec 2024',
-      description: 'Enhanced OpenHands AI coding agent with comprehensive benchmarking and visualization tools',
+      title: 'ToolsmithBench',
+      period: 'Spring 2026',
+      description: 'An agent benchmark for authoring, testing, maintaining, and reusing tools over time.',
       highlights: [
-        'Integrated Aider editing benchmark into OpenHands evaluation framework',
-        'Built visualization tools for cost and action histograms to analyze agent behavior',
-        'Contributed to open-source autonomous AI coding agent used by thousands of developers',
+        'Moves beyond fixed tool-use benchmarks to measure whether agents can expand their own action space',
+        'Evaluates tool lifecycle capabilities including implementation, debugging, maintenance, and reuse',
       ],
-      tags: ['Python', 'AI Agents', 'Benchmarking', 'Open Source', 'Data Visualization'],
-      githubUrl: 'https://github.com/OpenHands/OpenHands',
+      tags: ['Python', 'AI Agents', 'Benchmarking', 'Tool Learning', 'Evaluation'],
+      githubUrl: 'https://github.com/RajWorking/ToolsmithBench',
     },
     {
-      title: 'SIFT Image Stitching',
-      period: 'Sep 2021 – Nov 2021',
-      description: 'From-scratch implementation of SIFT algorithm for robust image feature detection',
+      title: '3D Voxel Packing',
+      period: 'Spring 2026',
+      description: 'A tool-augmented frontier-model evaluation for multi-turn spatial reasoning.',
       highlights: [
-        'Implemented complete SIFT pipeline: keypoint detection, descriptor extraction, and matching',
-        'Applied homography estimation for seamless image stitching and panorama creation',
-        'Achieved robust feature matching across varying scales, rotations, and lighting conditions',
+        'Challenges agents to pack voxelized 3D objects into the smallest collision-free bounding box',
+        'Exposes place, rotate, and collision-check actions to test planning across multiple turns',
       ],
-      tags: ['Computer Vision', 'C++', 'Image Processing', 'Feature Detection', 'Homography'],
-      githubUrl: 'https://github.com/RajWorking/SIFT',
+      tags: ['Python', 'Spatial Reasoning', 'Tool Use', 'Model Evaluation', '3D'],
+      githubUrl: 'https://github.com/RajWorking/3D-Voxel-Packing',
     },
   ];
 
@@ -121,10 +131,10 @@ export function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeader 
           title="Projects" 
-          subtitle="Research and engineering projects across ML, NLP, and systems"
+          subtitle="Recent work in agent safety, adaptation, and evaluation"
         />
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

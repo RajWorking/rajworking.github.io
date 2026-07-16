@@ -54,8 +54,17 @@ export function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
+            <a
+              href="#hero"
+              onClick={(e) => handleNavClick(e, '#hero')}
+              className="font-semibold tracking-tight text-lg"
+              aria-label="Raj Maheshwari — back to top"
+            >
+              RM<span className="text-[var(--link-color)]">.</span>
+            </a>
+
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-7">
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -72,7 +81,7 @@ export function Navigation() {
             {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <Button variant="outline" size="sm" asChild>
-                <a href="https://shorturl.at/ckOPG" target="_blank" rel="noopener noreferrer">
+                <a href="/Resume/Raj_Maheshwari_Resume.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4 mr-2" />
                   Resume
                 </a>
@@ -112,7 +121,7 @@ export function Navigation() {
               ))}
               <div className="pt-4 border-t border-border flex flex-col gap-3">
                 <Button variant="outline" size="sm" asChild>
-                  <a href="https://shorturl.at/ckOPG" target="_blank" rel="noopener noreferrer">
+                  <a href="/Resume/Raj_Maheshwari_Resume.pdf" target="_blank" rel="noopener noreferrer">
                     <Download className="w-4 h-4 mr-2" />
                     Download Resume
                   </a>

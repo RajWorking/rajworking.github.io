@@ -80,15 +80,39 @@ function ExperienceItem({ company, title, location, period, highlights, tags, co
 export function ExperienceSection() {
   const experiences: ExperienceItemProps[] = [
     {
+      company: 'OpenHands',
+      title: 'Machine Learning Research Intern · advised by Prof. Graham Neubig',
+      location: 'Pittsburgh, PA',
+      period: 'May 2026 – Aug 2026',
+      companyLink: 'https://www.openhands.dev/',
+      highlights: [
+        <>
+          Architected an <strong>8-stage pipeline</strong> that transforms <strong>200K+ real agent conversations</strong> (<strong>~100 GB of trajectories</strong>) into verifiable, leak-proof reinforcement-learning coding tasks across <strong>1,000+ repositories</strong>.
+        </>,
+        <>
+          Reconstructed <strong>pre-work and human-merged gold repository states</strong> from <strong>OpenTelemetry traces</strong>, packaging reproducible tasks as <strong>Git bundles in GCS</strong> using the <strong>Harbor format</strong>.
+        </>,
+        <>
+          Automated grader creation through a <strong>multi-agent framework</strong> with deterministic <strong>fail-to-pass/pass-to-pass tests</strong> and structured <strong>LLM-as-a-judge checklists</strong>; explored <strong>meta-harness search and verifier rewards</strong> for recursively improving agent performance.
+        </>,
+      ],
+      tags: ['Coding Agents', 'Reinforcement Learning', 'Evaluation', 'Multi-Agent Systems', 'Python', 'GCS'],
+    },
+    {
       company: 'Google',
       title: 'Software Engineer, Search Verticals — Sports',
       location: 'Bengaluru, India',
       period: 'Jul 2023 – Jul 2025',
       highlights: [
-        'Shipped Samsung Galaxy S25 “NowBar” by infusing real-time 1P/3P data streams into LLM-generated outputs to deliver fresh, glanceable, context-rich sports updates for hundreds of millions of fans worldwide; iterated on prompt design and quality evaluation loops to improve freshness and usefulness.',
-        'Improved engagement in the Google Sports MiniApp by enabling discovery and follow of teams & leagues through new search functionality; designed backend pipelines with Knowledge Graph queries to maintain active datasets across 50+ locales with strong consistency and data quality.',
-        'Owned backend + ML-adjacent components for high-traffic sports features that must stay reliable during event-scale traffic spikes.',
-        'Led an automation-heavy migration of 1500+ server platform nodes to a new integration testing framework — reducing manual effort, improving onboarding efficiency and saving an estimated several SWE decades in cumulative engineering effort.',        
+        <>
+          Shipped <strong>Samsung Galaxy S25 “Now Bar”</strong> by enriching <strong>LLM-generated sports updates</strong> with <strong>real-time first- and third-party data</strong> for <strong>hundreds of millions of fans</strong> worldwide.
+        </>,
+        <>
+          Improved engagement in the <strong>Google Sports MiniApp</strong> by enabling discovery and follow of teams and leagues through search; designed backend pipelines with <strong>Knowledge Graph queries</strong> to maintain active datasets across <strong>50+ locales</strong>.
+        </>,
+        <>
+          Automated the migration of <strong>1,500+ server platform nodes</strong> to a new integration-testing framework, reducing manual effort and <strong>saving an estimated several decades of cumulative engineering effort</strong>.
+        </>,
       ],
       tags: [
         'Java',
@@ -97,10 +121,8 @@ export function ExperienceSection() {
         'Knowledge Graphs',
         'Search Engines',
         'Protocol Buffers',
-        'Engineering',
         'LLM Productionization',
         'Realtime Systems',
-        'Knowledge Graph',
         'Data Quality',
         'Testing Infrastructure',
       ],
@@ -113,9 +135,11 @@ export function ExperienceSection() {
       companyLink: 'https://www.summerofbitcoin.org/',
       companyLogo: sobLogo,
       highlights: [
-        'Contributed to bcoin (a production-grade Bitcoin full node + wallet in JavaScript), focusing on scalability, reliability, and protocol feature maturity for real-world deployments.',
         <>
-          Implemented feature upgrades aligned with modern Bitcoin standards, including{' '}
+          Contributed to <strong>bcoin</strong>, a production-grade <strong>Bitcoin full node and wallet</strong> in JavaScript, focusing on scalability, reliability, and protocol maturity.
+        </>,
+        <>
+          Implemented <strong>feature upgrades aligned with modern Bitcoin standards</strong>, including{' '}
           <a 
             href="https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki" 
             target="_blank" 
@@ -135,8 +159,12 @@ export function ExperienceSection() {
           </a>
           -adjacent functionality.
         </>,
-        'Expanded automated test coverage to protect backward compatibility and harden the node against edge cases encountered in production.',
-        'Mentored contributors on Bitcoin architecture, consensus mechanics, and protocol fundamentals—raising project velocity and code quality.',
+        <>
+          Expanded <strong>automated test coverage</strong> to protect backward compatibility and harden the node against production edge cases.
+        </>,
+        <>
+          Mentored contributors on <strong>Bitcoin architecture, consensus mechanics, and protocol fundamentals</strong>.
+        </>,
       ],
       tags: [
         'Blockchain',

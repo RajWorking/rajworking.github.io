@@ -8,10 +8,10 @@ interface PublicationProps {
   authors?: string;
   venue: string;
   year?: string;
-  scholarUrl?: string;
+  paperUrl?: string;
 }
 
-function PublicationItem({ title, authors, venue, year, scholarUrl }: PublicationProps) {
+function PublicationItem({ title, authors, venue, year, paperUrl }: PublicationProps) {
   return (
     <Card className="p-6 hover:shadow-md transition-shadow">
       <div className="flex items-start gap-4">
@@ -34,11 +34,11 @@ function PublicationItem({ title, authors, venue, year, scholarUrl }: Publicatio
               )}
             </div>
           </div>
-          {scholarUrl && (
+          {paperUrl && (
             <Button variant="outline" size="sm" asChild>
-              <a href={scholarUrl} target="_blank" rel="noopener noreferrer">
+              <a href={paperUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-2" />
-                View on Scholar
+                View paper
               </a>
             </Button>
           )}
@@ -51,34 +51,40 @@ function PublicationItem({ title, authors, venue, year, scholarUrl }: Publicatio
 export function PublicationsSection() {
   const publications: PublicationProps[] = [
     {
+      title: 'Mind the Gap: Multilingual Divide in LLM Bias Detection and Reasoning',
+      venue: 'ACL Student Research Workshop',
+      year: '2026',
+      paperUrl: 'https://openreview.net/pdf?id=xtOfzwKwXN',
+    },
+    {
       title: 'Public blockchain-envisioned security scheme using post quantum lattice-based aggregate signature for internet of drones applications',
       venue: 'IEEE Transactions on Vehicular Technology',
       year: '2023',
-      scholarUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:u5HHmVD_uO8C',
+      paperUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:u5HHmVD_uO8C',
     },
     {
       title: 'Blockchain-based efficient access control with handover policy in IoV-enabled intelligent transportation system',
       venue: 'IEEE Transactions on Vehicular Technology',
       year: '2023',
-      scholarUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:qjMakFHDy7sC',
+      paperUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:qjMakFHDy7sC',
     },
     {
       title: 'An efficient and secure post-quantum multi-authority ciphertext-policy attribute-based encryption method using lattice',
       venue: 'IEEE INFOCOM - Conference on Computer Communications Workshop',
       year: '2023',
-      scholarUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:9yKSN-GCB0IC',
+      paperUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:9yKSN-GCB0IC',
     },
     {
       title: 'Cloud-assisted security framework for drone-enabled offshore communications',
       venue: 'IEEE INFOCOM - Conference on Computer Communications Workshop',
       year: '2023',
-      scholarUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:2osOgNQ5qMEC',
+      paperUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:2osOgNQ5qMEC',
     },
     {
       title: 'QuickSync: A quickly synchronizing PoS-based blockchain protocol',
       venue: 'IEEE International Conference on Blockchain and Cryptocurrency (ICBC)',
       year: '2023',
-      scholarUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:d1gkVwhDpl0C',
+      paperUrl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=W2EjY_EAAAAJ&citation_for_view=W2EjY_EAAAAJ:d1gkVwhDpl0C',
     }
   ];
 
@@ -89,7 +95,7 @@ export function PublicationsSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeader 
           title="Publications" 
-          subtitle="Peer-reviewed research in blockchain and distributed systems"
+          subtitle="Research across language models, security, and distributed systems"
         />
         
         <div className="max-w-4xl space-y-4">
