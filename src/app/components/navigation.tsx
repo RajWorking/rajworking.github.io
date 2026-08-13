@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Download, Mail } from 'lucide-react';
 import { Button } from './ui/button';
+import resumePdfUrl from '../../../Resume/Raj_Maheshwari_Resume.pdf?url';
 
 const navItems = [
   { label: 'About', href: '#hero' },
@@ -81,7 +82,7 @@ export function Navigation() {
             {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <Button variant="outline" size="sm" asChild>
-                <a href="/Resume/Raj_Maheshwari_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href={resumePdfUrl} target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4 mr-2" />
                   Resume
                 </a>
@@ -121,7 +122,7 @@ export function Navigation() {
               ))}
               <div className="pt-4 border-t border-border flex flex-col gap-3">
                 <Button variant="outline" size="sm" asChild>
-                  <a href="/Resume/Raj_Maheshwari_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href={resumePdfUrl} target="_blank" rel="noopener noreferrer">
                     <Download className="w-4 h-4 mr-2" />
                     Download Resume
                   </a>

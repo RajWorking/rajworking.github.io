@@ -17,6 +17,17 @@ export default defineConfig({
     },
   },
 
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) =>
+          assetInfo.names.includes('Raj_Maheshwari_Resume.pdf')
+            ? 'Resume/[name][extname]'
+            : 'assets/[name]-[hash][extname]',
+      },
+    },
+  },
+
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
-  assetsInclude: ['**/*.svg', '**/*.csv'],
+  assetsInclude: ['**/*.svg', '**/*.csv', '**/*.pdf'],
 })
