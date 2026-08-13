@@ -1,7 +1,9 @@
 import { SectionHeader } from './section-header';
 import { Card } from './ui/card';
 import { TagChip } from './tag-chip';
-import { Building2, Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
+import googleLogo from '../../assets/google_logo.svg';
+import openHandsLogo from '../../assets/openhands_logo.png';
 import sobLogo from '../../assets/sob_logo.png';
 
 interface ExperienceItemProps {
@@ -24,7 +26,6 @@ function ExperienceItem({ company, title, location, period, highlights, tags, co
           <div className="flex items-start justify-between gap-4 flex-wrap">
             <div>
               <h3 className="text-2xl font-semibold group-hover:text-[var(--link-color)] transition-colors flex items-center gap-3">
-                {company}
                 {companyLogo && companyLink && (
                   <a 
                     href={companyLink} 
@@ -35,10 +36,11 @@ function ExperienceItem({ company, title, location, period, highlights, tags, co
                     <img 
                       src={companyLogo} 
                       alt={`${company} Logo`} 
-                      className="w-6 h-6"
+                      className="w-7 h-7 object-contain"
                     />
                   </a>
                 )}
+                {company}
               </h3>
               <p className="text-lg text-muted-foreground mt-1">{title}</p>
             </div>
@@ -81,28 +83,31 @@ export function ExperienceSection() {
   const experiences: ExperienceItemProps[] = [
     {
       company: 'OpenHands',
-      title: 'Machine Learning Research Intern · advised by Prof. Graham Neubig',
+      title: 'RL Environment Engineering Intern · advised by Prof. Graham Neubig',
       location: 'Pittsburgh, PA',
       period: 'May 2026 – Aug 2026',
       companyLink: 'https://www.openhands.dev/',
+      companyLogo: openHandsLogo,
       highlights: [
         <>
-          Architected an <strong>8-stage pipeline</strong> that transforms <strong>200K+ real agent conversations</strong> (<strong>~100 GB of trajectories</strong>) into verifiable, leak-proof reinforcement-learning coding tasks across <strong>1,000+ repositories</strong>.
+          Architected an <strong>8-stage pipeline</strong> that transforms <strong>200K+ real user-agent conversations</strong> (a few hundred GB of trajectories) into verifiable, leak-proof reinforcement-learning coding tasks across <strong>1,000+ repositories</strong>.
         </>,
         <>
-          Reconstructed <strong>pre-work and human-merged gold repository states</strong> from <strong>OpenTelemetry traces</strong>, packaging reproducible tasks as <strong>Git bundles in GCS</strong> using the <strong>Harbor format</strong>.
+          Reconstructed <strong>pre-work and human-merged gold repository states</strong> from <strong>OpenTelemetry traces</strong>, packaging reproducible tasks as <strong>Git bundles</strong> using the <strong>Harbor format</strong>.
         </>,
         <>
-          Automated grader creation through a <strong>multi-agent framework</strong> with deterministic <strong>fail-to-pass/pass-to-pass tests</strong> and structured <strong>LLM-as-a-judge checklists</strong>; explored <strong>meta-harness search and verifier rewards</strong> for recursively improving agent performance.
+          Automated grader creation through a <strong>multi-agent framework</strong> with deterministic <strong>fail-to-pass/pass-to-pass tests</strong>, enabling a <strong>recursively self-improving mechanism</strong> for the <strong>OpenHands SDK</strong> through meta-harness optimization and verifier rewards.
         </>,
       ],
-      tags: ['Coding Agents', 'Reinforcement Learning', 'Evaluation', 'Multi-Agent Systems', 'Python', 'GCS'],
+      tags: ['Coding Agents', 'Reinforcement Learning', 'Evaluation', 'Multi-Agent Systems', 'Python'],
     },
     {
       company: 'Google',
       title: 'Software Engineer, Search Verticals — Sports',
       location: 'Bengaluru, India',
       period: 'Jul 2023 – Jul 2025',
+      companyLink: 'https://www.google.com/',
+      companyLogo: googleLogo,
       highlights: [
         <>
           Shipped <strong>Samsung Galaxy S25 “Now Bar”</strong> by enriching <strong>LLM-generated sports updates</strong> with <strong>real-time first- and third-party data</strong> for <strong>hundreds of millions of fans</strong> worldwide.
@@ -136,31 +141,25 @@ export function ExperienceSection() {
       companyLogo: sobLogo,
       highlights: [
         <>
-          Contributed to <strong>bcoin</strong>, a production-grade <strong>Bitcoin full node and wallet</strong> in JavaScript, focusing on scalability, reliability, and protocol maturity.
-        </>,
-        <>
-          Implemented <strong>feature upgrades aligned with modern Bitcoin standards</strong>, including{' '}
-          <a 
-            href="https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki" 
-            target="_blank" 
+          Contributed key protocol upgrades to <strong>bcoin</strong>, a production-grade <strong>Bitcoin node and wallet</strong>, including{' '}
+          <a
+            href="https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--link-color)] underline hover:text-[var(--link-color)]/80"
           >
             Bech32m
           </a>
-          {' '}address support, BIP49/BIP84 flows, pruned node services, and{' '}
-          <a 
-            href="https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki" 
-            target="_blank" 
+          , BIP49/BIP84 flows, pruned-node services, and{' '}
+          <a
+            href="https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--link-color)] underline hover:text-[var(--link-color)]/80"
           >
             Taproot
           </a>
-          -adjacent functionality.
-        </>,
-        <>
-          Expanded <strong>automated test coverage</strong> to protect backward compatibility and harden the node against production edge cases.
+          -adjacent functionality—improving scalability, reliability, and test coverage.
         </>,
         <>
           Mentored contributors on <strong>Bitcoin architecture, consensus mechanics, and protocol fundamentals</strong>.
@@ -184,7 +183,7 @@ export function ExperienceSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeader 
           title="Experience" 
-          subtitle="Building large-scale systems and LLM-powered experiences"
+          subtitle="Building large-scale systems and RL environments for coding agents"
         />
         
         <div className="space-y-6">

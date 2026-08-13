@@ -81,11 +81,11 @@ export function ProjectsSection() {
     {
       title: 'Agentic Concierge',
       period: 'Mar 2026 – Apr 2026',
-      description: 'A safety-first harness for agents that book rides and appointments end to end.',
+      description: 'An extensible execution framework that turns conversational intent into safe, auditable real-world actions.',
       highlights: [
-        'Designed pluggable provider and domain adapters so one agent loop can discover, compare, and execute across services',
-        'Added a propose-then-commit gate requiring explicit user confirmation before every state-changing action',
-        'Built append-only SHA-256 hash-chained audit logs to detect replay, parameter substitution, and tampering',
+        'Decoupled providers, domains, and messaging channels through pluggable adapters around a reusable agent loop',
+        'Required explicit approval through a propose → confirm → execute protocol before any costly or state-changing action',
+        'Made sessions reconstructable and tamper-evident with durable plans and append-only SHA-256 hash-chained audit logs',
       ],
       tags: ['Python', 'FastAPI', 'SQLite', 'Agent Safety', 'Tool Use'],
       githubUrl: 'https://github.com/RajWorking/Agentic-Concierge',
@@ -93,11 +93,11 @@ export function ProjectsSection() {
     {
       title: 'TaskWeaver',
       period: 'Aug 2025 – Nov 2025',
-      description: 'Instance-level language-model adaptation through dynamically generated LoRA weights.',
+      description: 'A hypernetwork that adapts a language model to each prompt by generating input-specific LoRA weights on the fly.',
       highlights: [
-        'Generated per-input LoRA weights from semantic prompt embeddings without relying on task labels',
-        'Learned a universal adaptation mapping across Pythia, Gemma, and Qwen model families',
-        'Outperformed mixed-LoRA baselines on held-out RACE and SVAMP evaluations',
+        'Learned a task-label-free mapping from semantic prompt embeddings to model adaptations',
+        'Built dynamic LoRA layers and a training and evaluation stack spanning Pythia, Gemma, and Qwen',
+        'Improved over mixed-LoRA baselines on held-out RACE (18.7% → 25.1%) and SVAMP (4.67% → 16.3%)',
       ],
       tags: ['PyTorch', 'LoRA', 'Hypernetworks', 'Model Adaptation', 'Multi-Task Learning'],
       githubUrl: 'https://github.com/RajWorking/taskweaver',
@@ -105,23 +105,25 @@ export function ProjectsSection() {
     {
       title: 'ToolsmithBench',
       period: 'Spring 2026',
-      description: 'An agent benchmark for authoring, testing, maintaining, and reusing tools over time.',
+      description: 'A benchmark for whether agents can build a durable toolbox—not merely call tools they are given.',
       highlights: [
-        'Moves beyond fixed tool-use benchmarks to measure whether agents can expand their own action space',
-        'Evaluates tool lifecycle capabilities including implementation, debugging, maintenance, and reuse',
+        'Evaluates tool authoring, repair, validation, and reuse across sequential task families with hidden tests',
+        'Compares persistent and non-persistent agents through success, reuse, cost, latency, and amortization reports',
+        'Persistent GPT-5.4 runs improved success from 33.3% to 76.7% on the user-spending task sequence',
       ],
-      tags: ['Python', 'AI Agents', 'Benchmarking', 'Tool Learning', 'Evaluation'],
+      tags: ['Python', 'AI Agents', 'Benchmarking', 'Persistent Agents', 'Hidden Tests'],
       githubUrl: 'https://github.com/RajWorking/ToolsmithBench',
     },
     {
       title: '3D Voxel Packing',
       period: 'Spring 2026',
-      description: 'A tool-augmented frontier-model evaluation for multi-turn spatial reasoning.',
+      description: 'An objective frontier-model evaluation of spatial planning under hard geometric constraints.',
       highlights: [
-        'Challenges agents to pack voxelized 3D objects into the smallest collision-free bounding box',
-        'Exposes place, rotate, and collision-check actions to test planning across multiple turns',
+        'Requires agents to rotate and place irregular voxel objects while minimizing collision-free bounding-box volume',
+        'Built a geometry verifier and 3D visualizer to separate reasoning failures from formatting and parsing errors',
+        'Evaluated GPT-5.4, Claude Opus 4.6, and Gemini 3.1 Pro; no model solved the task reliably at pass@2',
       ],
-      tags: ['Python', 'Spatial Reasoning', 'Tool Use', 'Model Evaluation', '3D'],
+      tags: ['Python', 'Spatial Reasoning', 'Frontier Models', 'Model Evaluation', '3D'],
       githubUrl: 'https://github.com/RajWorking/3D-Voxel-Packing',
     },
   ];
@@ -131,7 +133,7 @@ export function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeader 
           title="Projects" 
-          subtitle="Recent work in agent safety, adaptation, and evaluation"
+          subtitle="Building adaptive models, capable agents, and evaluations that reveal where they fail"
         />
         
         <div className="grid md:grid-cols-2 gap-6">
