@@ -207,10 +207,10 @@
     \resumeItemListStart
 
         \resumeBulletItem{
-        Architected an \textbf{8-stage} end-to-end pipeline turning \textbf{200K\texttt{+}} real OpenHands agent conversations (\textbf{$\sim$100 GB} of trajectories) into verifiable, leak-proof RL coding tasks (\textbf{Harbor} format) by constructing each task's pre-work repo state and human-merged gold state from OpenTelemetry traces across \textbf{1000\texttt{+}} unique repos and storing them in GCS as Git bundles.
+        Architected an \textbf{8-stage end-to-end pipeline} turning \textbf{200K\texttt{+}} real OpenHands agent conversations (hundreds of GB of OpenTelemetry traces across \textbf{1,000\texttt{+}} unique repositories) into verifiable, leak-proof RL coding tasks in \textbf{Harbor} format. Automated creation of fail-to-pass and pass-to-pass tests for task grading using a \textbf{multi-agent framework}.
         }
         \resumeBulletItem{
-        Automated per-task grader creation via a \textbf{multi-agent framework}, producing deterministic fail-to-pass/pass-to-pass unit tests and an \textbf{LLM-as-a-judge} checklist using ground truth and multi-model agent rollouts. Designed a \textbf{recursively self-improving mechanism} using meta-harness search and verifier rewards to improve \textbf{OpenHands SDK} task performance.
+        Enabled a \textbf{recursively self-improving mechanism} for the \textbf{OpenHands SDK}, using meta-harness optimization and verifier rewards to improve agent task performance within the resulting RL environment.
         }
 
     \resumeItemListEnd
